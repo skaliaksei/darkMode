@@ -1,0 +1,7 @@
+*.ts
+*.json
+app.js
+/.idea
+/.vscode
+/.images
+gitignore.txt
