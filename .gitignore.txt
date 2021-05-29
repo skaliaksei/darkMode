@@ -1,7 +1,8 @@
-*.ts
-*.json
-app.js
-/.idea
-/.vscode
-/.images
-gitignore.txt
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!index.html
+!style.css
+!script.js
