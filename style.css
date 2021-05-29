@@ -28,16 +28,19 @@ h2 {
 }
 
 body {
-    background-color: rgb(27, 27, 27);
+    /* background-color: rgb(27, 27, 27); */
+    background: linear-gradient(90deg, #303030,black);
 }
 body.dark {
-    background-color: rgb(211, 211, 211);
+    /* background-color: rgb(211, 211, 211); */
+    background: linear-gradient(90deg, #acacac, #fff);
 }
 
 .container {
     max-width: 1200px;
     background-color: #fff;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 20px 50px;
 }
 .dark .container {
