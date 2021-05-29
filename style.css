@@ -30,7 +30,6 @@ h2 {
 body {
     background-color: rgb(27, 27, 27);
 }
-
 body.dark {
     background-color: rgb(211, 211, 211);
 }
@@ -41,7 +40,6 @@ body.dark {
     margin: 0 auto;
     padding: 20px 50px;
 }
-
 .dark .container {
     background-color: rgb(27, 27, 27);
 }
@@ -71,8 +69,6 @@ body.dark {
     display: block;
     margin: 20px 0;
 }
-
-
 
 
 @keyframes rotate {
