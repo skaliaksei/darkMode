@@ -1,1 +1,1 @@
-https://skaliaksei.github.io/darkmode/
+https://skaliaksei.github.io/darkMode/
