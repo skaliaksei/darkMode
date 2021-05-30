@@ -1,10 +1,6 @@
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('#checktheme');
 const darkClass = document.querySelector('body');
 let localData = localStorage.getItem('theme')
-
-
-
-
 
 if(!localData) {
   localStorage.setItem('theme', 'light')
@@ -12,8 +8,6 @@ if(!localData) {
 } else if(localData === 'dark') {
   setDark()
 } else setLight()
-
-
 
 function setDark() {
   localStorage.setItem('theme', 'dark')
