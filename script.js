@@ -1,4 +1,4 @@
-const btn = document.querySelector('#checktheme');
+const btn = document.querySelector('#checker');
 const darkClass = document.querySelector('body');
 let localData = localStorage.getItem('theme')
 
