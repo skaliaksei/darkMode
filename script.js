@@ -9,52 +9,44 @@ if(!localData) {
   localStorage.setItem('theme', 'light')
   darkClass.classList.add('light')
 } else if(localData === 'dark') {
-  setDark()
-} else setLight()
+  setDark();
+  swipeRight();
+} else {
+  setLight();
+  swipeLeft();
+}
+
+
+
+
+function swipeRight() {
+  key.classList.remove('swipe-left')
+  key.classList.add('swipe-right')
+}
+
+function swipeLeft() {
+  key.classList.remove('swipe-right')
+  key.classList.add('swipe-left')
+}
 
 function setDark() {
   localStorage.setItem('theme', 'dark')
   darkClass.classList.add('dark')
   darkClass.classList.remove('light')
-
-  key.classList.remove('swipe-left')
-  key.classList.add('swipe-right')
 }
 
 function setLight() {
   localStorage.setItem('theme', 'light')
   darkClass.classList.add('light')
   darkClass.classList.remove('dark')
-
-  key.classList.remove('swipe-right')
-  key.classList.add('swipe-left')
 }
-
-// btn.onclick = function() {
-//   if(localStorage.getItem('theme') === 'dark') {
-//     setLight();
-//   } else setDark();
-// }
-
-//-------------
-// Second example
-
-
-
 
 switchKey.onclick = function() {
   if(localStorage.getItem('theme') === 'dark') {
     setLight();
-  } else setDark();
-
-
-  // if (count % 2 == 0) {
-  //   key.classList.remove('swipe-left')
-  //   key.classList.add('swipe-right')
-  // } else {
-  //   key.classList.remove('swipe-right')
-  //   key.classList.add('swipe-left')
-  // }
-
-
+    swipeLeft();
+  } else {
+    setDark();
+    swipeRight();
+  }
 }
