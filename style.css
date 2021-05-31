@@ -95,11 +95,11 @@ body.dark {
   display: flex;
   align-items: center;
   position: relative;
-  width: 52px;
+  width: 86px;
   height: 26px;
   background-color: #000;
   cursor: pointer;
-  border-radius: 13px;
+  border-radius: 2px;
   border: solid 1px #000
 }
 .dark .switch {
@@ -108,13 +108,13 @@ body.dark {
 
 .on {
   position: absolute;
-  right: 6px;
+  right: 10px;
   color: #fff;
 }
 
 .off {
   position: absolute;
-  left: 10px;
+  left: 6px;
   color: #000;
 }
 
@@ -122,7 +122,7 @@ body.dark {
   position: absolute;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 2px;
   left: 1px;
   background-color: #fff;
 }
@@ -142,13 +142,13 @@ body.dark {
     left: 2px;
   }
   100% {
-    left: 27px;
+    left: 61px;
   }
 }
 
 @keyframes toLight {
   0% {
-    left: 27px;
+    left: 61px;
   }
   100% {
     left: 1px;
