@@ -7,84 +7,151 @@
     font-weight: 500;
   }
 
-  body {
-    background-color: #c9c9c9;
-  }
-  body.dark {
-    background-color: #242424;
-  }
+body {
+  background-color: #c9c9c9;
+}
+body.dark {
+  background-color: #242424;
+}
 
-  .wrapper {
-    max-width: 850px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
+.wrapper {
+  max-width: 850px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
-  .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-right: 20px;
-    padding-top: 10px;
-    max-width: 800px;
-    height: 200px;
-    background-color: #fff;
-    margin: 50px auto;
-    box-shadow: 0 20px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  .dark .container {
-    background-color: #000;
-  }
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 20px;
+  padding-top: 10px;
+  max-width: 800px;
+  height: 200px;
+  background-color: #fff;
+  margin: 50px auto;
+  box-shadow: 0 20px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.22);
+}
+.dark .container {
+  background-color: #000;
+}
 
-  #checker {
-    display: none;
-    transition-duration: .3s;
-  }
-  #checker:checked + .label .ball {
-    transform: translateX(58px);
-    background-color: #000;
-    border: solid 1px #fff;
-    border-radius: 2px;
-  }
-  #checker:checked + .label .moon {
-    z-index: 2;
-  }
-  #checker:checked + .label {
-    background-color: #fff;
-    border: solid 1px #000;
-  }
+#checker {
+  display: none;
+  transition-duration: .3s;
+}
+#checker:checked + .label .ball {
+  transform: translateX(58px);
+  background-color: #000;
+  border: solid 1px #fff;
+  border-radius: 2px;
+}
+#checker:checked + .label .moon {
+  z-index: 2;
+}
+#checker:checked + .label {
+  background-color: #fff;
+  border: solid 1px #000;
+}
 
-  .label {
-    width: 86px;
-    height: 26px;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 2px;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 25%), 0 9px 14px rgb(0 0 0 / 22%);
-  }
+.label {
+  width: 86px;
+  height: 26px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%), 0 9px 14px rgb(0 0 0 / 22%);
+}
 
-  .moon {
-    position: absolute;
-    left: 12px;
-    color: #000;
-  }
-  .sun {
-    position: absolute;
-    right: 12px;
-    color: #fff;
-  }
-  .ball {
-    position: absolute;
+.moon {
+  position: absolute;
+  left: 12px;
+  color: #000;
+}
+.sun {
+  position: absolute;
+  right: 12px;
+  color: #fff;
+}
+.ball {
+  position: absolute;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: solid 1px #000;
+  transition: 0.3s linear;
+  z-index: 3;
+}
+
+/* --------------- */
+
+.switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 52px;
+  height: 26px;
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 13px;
+  border: solid 1px #000
+}
+.dark .switch {
+  background-color: #fff;
+}
+
+.on {
+  position: absolute;
+  right: 6px;
+  color: #fff;
+}
+
+.off {
+  position: absolute;
+  left: 10px;
+  color: #000;
+}
+
+.key {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  left: 1px;
+  background-color: #fff;
+}
+.dark .key {
+  background-color: #000;
+}
+
+.key.swipe-right {
+  animation: toDark .3s ease-in forwards;
+}
+.key.swipe-left {
+  animation: toLight .3s ease-in forwards;
+}
+
+@keyframes toDark {
+  0% {
     left: 2px;
-    width: 22px;
-    height: 22px;
-    background-color: #fff;
-    border-radius: 3px;
-    border: solid 1px #000;
-    transition: 0.3s linear;
-    z-index: 3;
   }
+  100% {
+    left: 27px;
+  }
+}
+
+@keyframes toLight {
+  0% {
+    left: 27px;
+  }
+  100% {
+    left: 1px;
+  }
+}
+
