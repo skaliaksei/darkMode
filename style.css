@@ -40,7 +40,7 @@ body.dark {
   display: flex;
   align-items: center;
   position: relative;
-  width: 52px;
+  width: 62px;
   height: 26px;
   background-color: #000;
   cursor: pointer;
@@ -99,14 +99,15 @@ body.dark {
     left: 2px;
   }
   100% {
-    left: 27px;
+    left: 37px;
   }
 }
 
 @keyframes toLight {
   0% {
-    left: 27px;
+    left: 37px;
   }
   100% {
     left: 1px;
   }
+}
