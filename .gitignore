@@ -1,9 +1,5 @@
 # Ignore everything
-*
+#*
 
 # But not these files...
-!.gitignore
-!/images/*.svg
-!index.html
-!style.css
-!script.js
+.gitignore
