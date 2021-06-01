@@ -36,58 +36,7 @@ body.dark {
   background-color: #000;
 }
 
-#checker {
-  display: none;
-  transition-duration: .3s;
-}
-#checker:checked + .label .ball {
-  transform: translateX(58px);
-  background-color: #000;
-  border: solid 1px #fff;
-  border-radius: 2px;
-}
-#checker:checked + .label .moon {
-  z-index: 2;
-}
-#checker:checked + .label {
-  background-color: #fff;
-  border: solid 1px #000;
-}
 
-.label {
-  width: 86px;
-  height: 26px;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 2px;
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 25%), 0 9px 14px rgb(0 0 0 / 22%);
-}
-
-.moon {
-  position: absolute;
-  left: 12px;
-  color: #000;
-}
-.sun {
-  position: absolute;
-  right: 12px;
-  color: #fff;
-}
-.ball {
-  position: absolute;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  background-color: #fff;
-  border-radius: 3px;
-  border: solid 1px #000;
-  transition: 0.3s linear;
-  z-index: 3;
-}
 
 /* --------------- */
 
@@ -95,11 +44,11 @@ body.dark {
   display: flex;
   align-items: center;
   position: relative;
-  width: 86px;
+  width: 52px;
   height: 26px;
   background-color: #000;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 50px;
   border: solid 1px #000
 }
 .dark .switch {
@@ -108,21 +57,33 @@ body.dark {
 
 .on {
   position: absolute;
-  right: 10px;
+  right: 2px;
   color: #fff;
+}
+
+.moon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
 }
 
 .off {
   position: absolute;
-  left: 6px;
+  left: 3px;
   color: #000;
+}
+
+.sun {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
 }
 
 .key {
   position: absolute;
   width: 22px;
   height: 22px;
-  border-radius: 2px;
+  border-radius: 50%;
   left: 1px;
   background-color: #fff;
 }
@@ -142,16 +103,14 @@ body.dark {
     left: 2px;
   }
   100% {
-    left: 61px;
+    left: 27px;
   }
 }
 
 @keyframes toLight {
   0% {
-    left: 61px;
+    left: 27px;
   }
   100% {
     left: 1px;
   }
-}
-
