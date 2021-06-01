@@ -17,8 +17,6 @@ if(!localData) {
 }
 
 
-
-
 function swipeRight() {
   key.classList.remove('swipe-left')
   key.classList.add('swipe-right')
